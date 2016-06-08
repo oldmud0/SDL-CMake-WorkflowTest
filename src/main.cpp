@@ -18,15 +18,15 @@ int main(int args, char** argv) {
 		std::cout << "SDL_Init error: " << SDL_GetError() << std::endl;
 		return 1;
 	}
-	
+
 	window = SDL_CreateWindow("It works!", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	
+
 	for(int i = 0; i < 0xf; i++)
 		render();
-	
+
 	SDL_Quit();
-	
+
 	return 0;
 }
 
